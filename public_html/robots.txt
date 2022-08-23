@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /public
+Disallow: /administrator
+Allow: /
+

@@ -1,0 +1,69 @@
+version: "3.8"
+services:
+  app:
+    build:
+      args:
+        user: sammy
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: superfavoritos
+    container_name: superfavoritos-app
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - ./public_html:/var/www
+    networks:
+      - superfavoritos
+
+  mysql-db:
+    image: mysql:8.0
+    container_name: mysql_superv_container
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql/data/:/docker-entrypoint-initdb.d
+    cap_add:
+      - SYS_NICE # Desabilitar o aviso "mbind: Operation not permitted"
+    networks:
+      - superfavoritos
+
+  nginx:
+    image: nginx:alpine
+    container_name: superfavoritos-nginx
+    restart: unless-stopped
+    ports:
+      - 80:80
+    depends_on:
+      - mysql-db
+    links:
+      - mysql-db
+    volumes:
+      - ./public_html:/var/www
+      - ./docker-compose/nginx:/etc/nginx/conf.d/
+      - ./logs:/var/log/nginx
+    networks:
+      - superfavoritos
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    depends_on:
+      - mysql-db
+    links:
+      - mysql-db
+    ports:
+      - 8000:80
+    environment:
+      - PMA_ARBITRARY=1
+    networks:
+      - superfavoritos
+
+networks:
+  superfavoritos:
+    driver: bridge

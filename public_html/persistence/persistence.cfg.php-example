@@ -1,0 +1,8 @@
+<?php
+
+define("USER_BD",'');
+define("HOST_BD",'');
+define("NAME_BD",'');
+define("PASSWORD_BD", '');
+
+?>

@@ -1,0 +1,421 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	font-family: arial, sans-serif;
+    font-size: 14px;
+	background: url(../images/gold6.jpg);
+    
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+    padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+li {
+	list-style: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+img {
+	border: none;
+}
+
+#container-login {
+
+    width: 400px;
+	display: table;
+	margin: auto;
+	background: #ffe;
+    margin-top: 100px;
+    border: 1px solid #999;
+}
+
+#container-login input {
+    border: 1px solid #333;
+    margin-top: 10px;
+
+}
+
+#topo-login {
+    padding: 10px;
+    
+    width: 380px;
+    height: 20px;
+    float: left;
+    background: #333;
+    color: #fff;
+    background: url(../images/topo-login.jpg);
+    font-weight: bold;
+}
+
+#imagem-login {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 90px;
+    height: 158px;
+    float:left;
+    background: #ffe url(../images/cadeado.png) no-repeat;
+}
+
+#conteudo-login {
+     width: 288px;
+     height: 170px;
+     float: left;
+     background: #ffe;
+     
+     padding: 5px;
+
+}
+
+#conteudo-login p {
+    display: block;
+}
+
+#container {
+    width: 920px;
+    margin: 50px auto;
+    display: table;
+    background: #ffe;
+	border: 5px solid #900;
+    
+}
+
+#topo-admin {
+    float: left;
+    width: 920px;
+    height: 60px;
+    background: url(../images/topo-admin.jpg);
+}
+
+#mensagem {
+    color: #600;
+    font-size: 12px;
+    float: left;
+    width: 920px;
+    height: 20px;
+    padding-top: 5px;
+    text-align: right;
+    background: #fff;
+    font-weight: bold;
+    border-top: 1px dotted #600;
+}
+
+
+#menu-topo {
+	width: 920px;
+	height: 40px;
+	float: left;
+	background: #fff; /*#ff0 url(../images/menu-topo.jpg); */
+	text-align: center;
+    font-weight: bold;
+}
+
+#menu-topo a {
+    
+	font-size: 12px;
+	color: #600;
+	display: inline-block;
+	height: 30px;
+	padding: 10px 15px 0 16px ;
+    
+}
+
+#menu-topo a:hover {
+	/*background:  #666 url(../images/menu-topo-hover.jpg);;*/
+	color: #09f;
+
+}
+
+#conteudo {
+	width: 910px;
+	min-height: 400px;
+	margin-top: 10px;
+	background: #fff;
+	float: left;
+    padding-left: 10px;
+}
+
+#rodape {
+	width: 920px;
+	height: 20px;
+	background: #fff;
+	float: left;
+	padding: 5px 0 5px 0;
+	text-align: right;
+	color: #666;
+	margin-top: 10px;
+	font-size: 12px;
+    border-top: 5px solid #999;
+}
+
+#rodape a {
+    color: #333;
+}
+
+#rodape a:hover {
+    text-decoration: underline;
+}
+
+#form-empresa {
+    float:left;
+    
+    width: 450px;
+    height: 300px;
+    background: #ffe;
+    text-align: right;
+    margin-left: 235px;
+    margin-top: 20px;
+   border: 1px dotted #333;
+}
+
+#form-empresa h3 {
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted #069;
+    display: block;
+    background: #ff6;
+    
+}
+
+#menu-listagem {
+    float:left;
+    padding: 5px;
+    width: 888px;
+    height: 58px;
+    background: #eee;
+    text-align: left;
+    margin-bottom: 10px;
+	border: 1px dotted #999;
+    
+}
+
+#menu-listagem-titulo {
+    float:left;
+    width: 300px;
+    height: 20px;
+    margin-top: 20px;
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 15px;
+     
+}
+
+#menu-botoes {
+	float:right;
+    
+    width: 500px;
+    height: 60px;
+    
+    
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 15px;
+	text-align: right;
+}
+
+
+
+#menu-botoes img {
+	margin-left: 10px;
+	
+}
+
+#menu-botoes img:hover {
+    background: #f90;
+}
+
+#menu-botoes a {
+    display: inline-block;
+    
+	
+	
+    
+
+}
+
+
+#menu-filtro {
+    float:left;
+    padding: 5px;
+    width: 890px;
+    height: 30px;
+    background: #fff;
+    text-align: left;
+    
+    
+}
+
+#listagem {	
+	float:left;
+	
+	width: 900px;
+	margin-top: 10px;
+}
+
+#listagem table {
+	padding: 0px;
+	width: 100%;
+    border-bottom: 1px solid #333;
+}
+
+#listagem table.realce tr:hover {
+    background: #ff6;
+}
+
+#listagem th {
+	color: #00f;
+	padding: 10px;
+	margin: 0px;
+	background: #eee;
+	border-bottom: 1px solid #999;
+}
+
+#listagem tr {
+	
+	padding: 10px;
+}
+
+
+#listagem tr.even {
+	background: #eee;
+} 
+
+#listagem tr.odd {
+	background: #fff;
+}
+
+#listagem td.left {
+    text-align: left;
+}
+
+#listagem td.center {
+    text-align: center;
+}
+
+#listagem p {
+    text-align: right;
+    margin-top: 5px;
+}
+
+#texto input {
+	border: 1px solid #ccc;
+}
+
+#mensagem-operacao {
+	float:left;
+	width: 900px;
+	height: 25px;
+	
+	text-align: center;
+	padding-top: 5px;
+	margin-top: 10px;
+	font-weight: bold;
+	font-size: 12px;
+	color: #900;
+}
+
+
+.box {
+    float: left;
+    padding-top:5px;
+    padding-bottom:5px;
+    width: 290px;
+    height: 50px;
+    background: #eee;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+   
+   
+}
+
+.box:hover {
+    background: #f90;
+
+}
+
+.box-titulo {
+    float:left;
+    padding: 5px;
+    width: 910px;
+    height: 50px;
+    background: #000;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #fff;
+	
+     
+}
+
+
+.box img {
+
+    margin: 0 10px 0 0 ;
+}
+
+.box a {
+    padding: 5px;
+    
+    color: #333;
+}
+
+.box a:hover {
+    color: #666;
+    
+}
+
+
+
+.error-message {
+    color: #f00;
+}
+
+
+.sucess-message {
+	font-weight: bold;
+    color: #060;
+}
+
+.marca-texto {
+	background: #ff0;
+}
+
+.titulo-input {
+	float: left;
+
+	width: 70px;
+	padding: 4px;
+}
+
+.box-inserir-foto {
+	float: left;
+	width: 440px;
+	height: 390px;
+	margin-right: 10px;
+	padding-bottom: 10px;
+}
+
+.box-inserir-foto p {
+	margin-top: 10px;
+}
